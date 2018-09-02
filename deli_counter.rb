@@ -3,8 +3,10 @@ def line(the_deli)
   the_line = [] #create a new array
   if the_deli != []
     the_deli.each_with_index { |name, index|
-      the_line << "#{index+1}. #{name}" } #make the array the way you want the texts to display
-      puts "The line is currently: #{the_line.join(" ")}" #turn them into a string by simply adding space
+      the_line << "#{index+1}. #{name}" }
+      #make the array the way you want the texts to display
+      puts "The line is currently: #{the_line.join(" ")}"
+      #turn them into a string by simply adding space
   else
     puts "The line is currently empty."
   end
@@ -20,7 +22,7 @@ end
 def now_serving(the_deli)
   if the_deli.length > 0
     puts "Currently serving #{the_deli[0]}."
-    the_deli.shift
+    the_deli.shift #use .shift to remove 1st item in the array
   else
     puts "There is nobody waiting to be served!"
   end
